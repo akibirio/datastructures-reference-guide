@@ -1,19 +1,21 @@
 package JavaArrays;
 
-import java.util.Arrays;
-
 public class CodeFactory3DArray {
-    // adding an implementaion of a three dimension array
-
     public static void main(String[] args) {
-        // signature
-        int[][] ticTacToeBoard = {{0,0,0},{0,0,0},{0,0,0}};
+        //create a 3d array
+        int[][][] threeDArray = {{{1, -2, 3}, {2, 3, 4}}, {{-4,-5,6,9},{1},{2,3}}};
 
-        //loop through 3 d using enhanced for loop
-        for(int[] iBoard : ticTacToeBoard){
-            System.out.print(Arrays.toString(iBoard));
+        // using for...each to loop through elements of 3d array
+        for (int[][] array2D : threeDArray) {
+            for (int[] array1D : array2D) {
+                for (int element : array1D) {
+                    System.out.println(element);
+                }
+                
+            }
+            
         }
-        
+
     }
     
 }
